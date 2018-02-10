@@ -1,0 +1,11 @@
+<h1>Donation Page</h1>
+
+<p>How much would you like to donate?</p>
+
+<div>
+  <form [formGroup]="form">
+
+      <input matInput placeholder = "Amount" formControlName="amount">
+    <button type = "submit" (click)="makeDonation()">Make Donation</button>
+  </form>
+</div>
