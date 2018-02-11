@@ -16,7 +16,7 @@ export class LandingPageComponent {
     const card2: Causes = {title: 'Medical Diseases',
       img: 'https://cdn.shopify.com/s/files/1/1061/1924/files/Sick_Emoji_Icon_2.png?13752525173949329807',
       content: 'Cancer, heart disease, etc.'};
-    const card3: Causes = {title: 'Social Justice', img: 'http://moziru.com/images/right-clipart-social-justice-15.png',
+    const card3: Causes = {title: 'Social Justice', img: 'http://www.sunnyhill.org/wp-content/uploads/2017/10/one-world-logo.png',
       content: 'Human right, environmentalism, etc.'};
     const card4: Causes = {title: 'Education', img: 'http://unothegateway.com/wp-content/uploads/2015/10/education.jpg',
       content: 'Adult learning programs, STEM programs, etc.'};
