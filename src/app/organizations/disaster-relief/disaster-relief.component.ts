@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {NessieService} from "../../nessie.service";
+import {NessieService} from '../../nessie.service';
+import {Merchant} from '../../merchant';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-disaster',
@@ -10,15 +12,20 @@ import {NessieService} from "../../nessie.service";
 export class DisasterReliefComponent implements OnInit {
 
   organizations = ['Passion City Church', 'Hurricane Relief'];
-  accounts: Account[] = [];
+  merchants: Merchant[] = [];
 
-  constructor(private nessieService: NessieService) {
+  constructor(private nessieService: NessieService,
+              private router: Router) {
   }
 
   ngOnInit(): void {
-    this.nessieService.getAllAccounts()
+    this.nessieService.getAllMerchants()
       .subscribe((data) => {
-        this.accounts = data;
+        this.merchants = data;
       });
+  }
+
+  goToPayments(merchantList) {
+    this.router.navigate(['/payment'], {queryParams: {merchantList: merchantList}});
   }
 }
