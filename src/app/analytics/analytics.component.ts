@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AnalyticsComponent {
   // Doughnut
-  public doughnutChartLabels:string[] = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
-  public doughnutChartData:number[] = [350, 450, 100];
+  public doughnutChartLabels:string[] = ['Supplies', 'Rescue Efforts', 'Victim Relocation'];
+  public doughnutChartData:number[] = [40, 45, 15];
   public doughnutChartType:string = 'doughnut';
 
   // events
