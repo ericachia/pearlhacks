@@ -2,7 +2,10 @@
 
 <p>Select which cause you would like to donate to:</p>
 
-<mat-card class="example-card" *ngFor="let t of titles">
+<div class = "flex-container">
+  <div *ngFor="let t of titles">
+    <button>
+<mat-card class="example-card" >
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
     <mat-card-title>{{t.title}}</mat-card-title>
@@ -12,7 +15,9 @@
     <p>
       {{t.content}}
     </p>
-    <p>Hello</p>
   </mat-card-content>
 </mat-card>
+    </button>
+  </div>
+</div>
 

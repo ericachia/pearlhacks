@@ -1,7 +1,25 @@
 .example-card {
   max-width: 200px;
+  height: 200px;
 }
 
 .example-header-image {
   background-size: cover;
 }
+
+img {
+  width: auto;
+  max-width: 100px;
+  height: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
