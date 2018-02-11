@@ -14,6 +14,7 @@ import {NessieService} from './nessie.service';
 import {HttpClientModule} from '@angular/common/http';
 import { AnalyticsComponent } from './analytics/analytics.component';
 import { ChartsModule } from 'ng2-charts';
+import { OverallAnalyticsComponent } from './overall-analytics/overall-analytics.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { ChartsModule } from 'ng2-charts';
     PaymentFormComponent,
     HeaderBarComponent,
     DisasterReliefComponent,
-    AnalyticsComponent
+    AnalyticsComponent,
+    OverallAnalyticsComponent
   ],
   imports: [
     BrowserModule,
