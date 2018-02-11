@@ -11,10 +11,15 @@ export class LandingPageComponent {
   titles: Causes[];
 
   constructor() {
-    const card1: Causes = {title: 'Disaster Relief', img: 'https://openclipart.org/image/2400px/svg_to_png/224271/9va-Cartoon_Tornado.png', content: 'Earthquakes, hurricanes, etc.'};
-    const card2: Causes = {title: 'Medical Diseases', img: 'https://cdn.shopify.com/s/files/1/1061/1924/files/Sick_Emoji_Icon_2.png?13752525173949329807', content: 'Cancer, heart disease, etc.'};
-    const card3: Causes = {title: 'Social Justice', img: 'http://moziru.com/images/right-clipart-social-justice-15.png', content: 'Human right, environmentalism, etc.'};
-    const card4: Causes = {title: 'Education', img: 'http://unothegateway.com/wp-content/uploads/2015/10/education.jpg', content: 'Adult learning programs, STEM programs, etc.'};
+    const card1: Causes = {title: 'Disaster Relief', img: 'https://openclipart.org/image/2400px/svg_to_png/224271/9va-Cartoon_Tornado.png',
+      content: 'Earthquakes, hurricanes, etc.'};
+    const card2: Causes = {title: 'Medical Diseases',
+      img: 'https://cdn.shopify.com/s/files/1/1061/1924/files/Sick_Emoji_Icon_2.png?13752525173949329807',
+      content: 'Cancer, heart disease, etc.'};
+    const card3: Causes = {title: 'Social Justice', img: 'http://moziru.com/images/right-clipart-social-justice-15.png',
+      content: 'Human right, environmentalism, etc.'};
+    const card4: Causes = {title: 'Education', img: 'http://unothegateway.com/wp-content/uploads/2015/10/education.jpg',
+      content: 'Adult learning programs, STEM programs, etc.'};
     this.titles = [card1, card2, card3, card4];
 
   }

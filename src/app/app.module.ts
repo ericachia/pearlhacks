@@ -8,7 +8,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import {LandingPageComponent} from './landing-page/landing-page.component';
 import { PaymentFormComponent } from './payment-form/payment-form.component';
+import { HeaderBarComponent } from './header-bar/header-bar.component';
 import { DisasterReliefComponent } from './organizations/disaster-relief/disaster-relief.component';
+
 
 
 @NgModule({
@@ -16,6 +18,7 @@ import { DisasterReliefComponent } from './organizations/disaster-relief/disaste
     AppComponent,
     LandingPageComponent,
     PaymentFormComponent,
+    HeaderBarComponent
     DisasterReliefComponent
   ],
   imports: [
