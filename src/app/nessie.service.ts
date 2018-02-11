@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
+import {Merchant} from './merchant';
 
 @Injectable()
 export class NessieService {
@@ -14,5 +15,11 @@ export class NessieService {
     const params = new HttpParams().set('key', this.API_KEY);
 
     return this.http.get<Account[]>(url, {params: params});
+  }
+
+  getAllMerchants(): Observable<Merchant[]> {
+    const url = 'http://api.reimaginebanking.com/merchants?lat=34.98&lng=-79.48&rad=70';
+    const params = new HttpParams().set('key', this.API_KEY);
+    return this.http.get<Merchant[]>(url, {params: params});
   }
 }

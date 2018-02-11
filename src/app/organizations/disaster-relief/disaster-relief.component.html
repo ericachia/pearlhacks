@@ -3,12 +3,13 @@
 </header>
 
 <mat-selection-list #organizationList>
-  <mat-list-option *ngFor='let o of organizations'>
-    <p matLine>{{o}}</p>
-    <p matLine>Hello</p>
+  <mat-list-option *ngFor='let m of merchants'>
+    <p matLine>{{m.name}}</p>
   </mat-list-option>
 </mat-selection-list>
 
 <p>
   Options selected: {{organizationList.selectedOptions.selected.length}}
 </p>
+
+<button (click) = "goToPayments(organizationList)">Make Donation</button>
