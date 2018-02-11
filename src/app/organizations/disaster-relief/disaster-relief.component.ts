@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NessieService} from "../../nessie.service";
 
 @Component({
   selector: 'app-disaster',
@@ -6,12 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./disaster-relief.component.css']
 })
 
-export class DisasterReliefComponent {
+export class DisasterReliefComponent implements OnInit {
 
-  organizations: String[];
+  organizations = ['Passion City Church', 'Hurricane Relief'];
+  accounts: Account[] = [];
 
-  constructor() {
-    this.organizations = ['Passion City Church', 'Hurricane Relief'];
+  constructor(private nessieService: NessieService) {
   }
 
+  ngOnInit(): void {
+    this.nessieService.getAllAccounts()
+      .subscribe((data) => {
+        this.accounts = data;
+      });
+  }
 }

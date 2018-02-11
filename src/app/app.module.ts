@@ -10,6 +10,8 @@ import {LandingPageComponent} from './landing-page/landing-page.component';
 import { PaymentFormComponent } from './payment-form/payment-form.component';
 import { HeaderBarComponent } from './header-bar/header-bar.component';
 import { DisasterReliefComponent } from './organizations/disaster-relief/disaster-relief.component';
+import {NessieService} from "./nessie.service";
+import {HttpClientModule} from "@angular/common/http";
 
 
 
@@ -28,9 +30,10 @@ import { DisasterReliefComponent } from './organizations/disaster-relief/disaste
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
-    MatListModule
+    MatListModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [NessieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
