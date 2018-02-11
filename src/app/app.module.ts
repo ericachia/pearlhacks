@@ -8,13 +8,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import {LandingPageComponent} from './landing-page/landing-page.component';
 import { PaymentFormComponent } from './payment-form/payment-form.component';
+import { HeaderBarComponent } from './header-bar/header-bar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
-    PaymentFormComponent
+    PaymentFormComponent,
+    HeaderBarComponent
   ],
   imports: [
     BrowserModule,
