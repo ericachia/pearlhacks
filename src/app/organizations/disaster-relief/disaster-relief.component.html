@@ -1,1 +1,12 @@
-<p>Hello</p>
+<h1>Organizations</h1>
+
+<mat-selection-list #organizationList>
+  <mat-list-option *ngFor='let o of organizations'>
+    <p matLine>{{o}}</p>
+    <p matLine>Hello</p>
+  </mat-list-option>
+</mat-selection-list>
+
+<p>
+  Options selected: {{organizationList.selectedOptions.selected.length}}
+</p>
