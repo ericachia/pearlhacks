@@ -8,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 
 export class DisasterReliefComponent {
 
-  // organizations: String[];
-  //
-  // constructor() {
-  //   this.organizations = ['Passion City Church', 'Hurricane Relief'];
-  // }
-  organizations = ['Passion City Church', 'Hurricane Relief'];
+  organizations: String[];
+
+  constructor() {
+    this.organizations = ['Passion City Church', 'Hurricane Relief'];
+  }
+
 }

@@ -18,7 +18,7 @@ import { DisasterReliefComponent } from './organizations/disaster-relief/disaste
     AppComponent,
     LandingPageComponent,
     PaymentFormComponent,
-    HeaderBarComponent
+    HeaderBarComponent,
     DisasterReliefComponent
   ],
   imports: [
