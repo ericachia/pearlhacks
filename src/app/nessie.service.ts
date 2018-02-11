@@ -28,4 +28,22 @@ export class NessieService {
     const params = new HttpParams().set('key', this.API_KEY);
     return this.http.get<any>(url, {params: params});
   }
+
+  getMerchantsFromAccount(): Observable<any>{
+    const url = 'http://api.reimaginebanking.com/accounts/5a7f86c05eaa612c093b0e64/purchases?';
+    const params = new HttpParams().set('key', this.API_KEY);
+    return this.http.get<any>(url, {params: params});
+  }
+
+  getMerchantName(id): Observable<any>{
+    const url = 'http://api.reimaginebanking.com/merchants/' + id + '?';
+    const params = new HttpParams().set('key', this.API_KEY);
+    return this.http.get<any>(url, {params: params});
+  }
+
+  getTotalMerchantPurchases(id): Observable<any>{
+    const url = 'http://api.reimaginebanking.com/merchants/' + id + '/purchases?';
+    const params = new HttpParams().set('key', this.API_KEY);
+    return this.http.get<any>(url, {params:params});
+  }
 }
