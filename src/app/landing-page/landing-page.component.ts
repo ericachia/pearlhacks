@@ -1,5 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { Causes } from './landing-page-causes.interface';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-landing-page',
@@ -10,7 +11,7 @@ import { Causes } from './landing-page-causes.interface';
 export class LandingPageComponent {
   titles: Causes[];
 
-  constructor() {
+  constructor(private router: Router) {
     const card1: Causes = {title: 'Disaster Relief', img: 'https://openclipart.org/image/2400px/svg_to_png/224271/9va-Cartoon_Tornado.png',
       content: 'Earthquakes, hurricanes, etc.'};
     const card2: Causes = {title: 'Medical Diseases',
@@ -22,5 +23,8 @@ export class LandingPageComponent {
       content: 'Adult learning programs, STEM programs, etc.'};
     this.titles = [card1, card2, card3, card4];
 
+  }
+  goToPage() {
+    this.router.navigate(['/disaster-relief']);
   }
 }

@@ -15,7 +15,8 @@ export class PaymentFormComponent implements OnInit{
   merchantId: string;
   objs: any;
 
-  constructor(private fb: FormBuilder, private activatedRoute: ActivatedRoute, private nessieService: NessieService) {
+  constructor(private fb: FormBuilder, private activatedRoute: ActivatedRoute, private nessieService: NessieService,
+              private router: Router) {
     this.form = this.fb.group({
       amount: ''
     });
@@ -31,6 +32,7 @@ export class PaymentFormComponent implements OnInit{
         this.objs = data;
         console.log(this.objs);
       });
+    this.router.navigate(['/analytics']);
   }
 
 }
