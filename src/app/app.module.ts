@@ -10,9 +10,10 @@ import {LandingPageComponent} from './landing-page/landing-page.component';
 import { PaymentFormComponent } from './payment-form/payment-form.component';
 import { HeaderBarComponent } from './header-bar/header-bar.component';
 import { DisasterReliefComponent } from './organizations/disaster-relief/disaster-relief.component';
-import {NessieService} from "./nessie.service";
-import {HttpClientModule} from "@angular/common/http";
-
+import {NessieService} from './nessie.service';
+import {HttpClientModule} from '@angular/common/http';
+import { AnalyticsComponent } from './analytics/analytics.component';
+import { ChartsModule } from 'ng2-charts';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import {HttpClientModule} from "@angular/common/http";
     LandingPageComponent,
     PaymentFormComponent,
     HeaderBarComponent,
-    DisasterReliefComponent
+    DisasterReliefComponent,
+    AnalyticsComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import {HttpClientModule} from "@angular/common/http";
     ReactiveFormsModule,
     MatInputModule,
     MatListModule,
-    HttpClientModule
+    HttpClientModule,
+    ChartsModule
   ],
   providers: [NessieService],
   bootstrap: [AppComponent]
