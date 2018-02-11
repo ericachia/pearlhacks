@@ -10,8 +10,6 @@ import { Router } from '@angular/router';
 })
 
 export class DisasterReliefComponent implements OnInit {
-
-  organizations = ['Passion City Church', 'Hurricane Relief'];
   merchants: Merchant[] = [];
 
   constructor(private nessieService: NessieService,
@@ -25,7 +23,7 @@ export class DisasterReliefComponent implements OnInit {
       });
   }
 
-  goToPayments(merchantList) {
-    this.router.navigate(['/payment'], {queryParams: {merchantList: merchantList}});
+  goToPayments(merchantId) {
+    this.router.navigate(['/payment'], {queryParams: {merchantId: merchantId}});
   }
 }

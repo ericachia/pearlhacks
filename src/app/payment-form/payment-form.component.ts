@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {NessieService} from '../nessie.service';
-import {Router} from '@angular/router';
+import {Router, ActivatedRoute} from '@angular/router';
 import {Merchant} from '../merchant';
 
 @Component({
@@ -10,17 +10,27 @@ import {Merchant} from '../merchant';
   styleUrls: ['./payment-form.component.css']
 })
 
-export class PaymentFormComponent{
+export class PaymentFormComponent implements OnInit{
   form: FormGroup;
+  merchantId: string;
+  objs: any;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private activatedRoute: ActivatedRoute, private nessieService: NessieService) {
     this.form = this.fb.group({
       amount: ''
     });
   }
 
+  ngOnInit(): void {
+    this.activatedRoute.queryParams.subscribe(params => this.merchantId = params['merchantId']);
+  }
+
   makeDonation() {
-    console.log(this.form.value.amount);
+    this.nessieService.makePayment()
+      .subscribe((data) => {
+        this.objs = data;
+        console.log(this.objs);
+      });
   }
 
 }
